@@ -33,7 +33,9 @@
 		embedded_svc.settings.prepopulatedPrechatFields = {FirstName: "Alberto",LastName: "Vazquez",Email: "alberto.vazquez@isdin.com", Subject: "Test"};
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-		//embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Origin", "value": "Chat", "displayToAgent": true}];
+		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Origin", "value": "Chat", "displayToAgent": true},
+								 { "label": "Reported By", "value": "Cliente", "displayToAgent": true},
+								 { "label": "Priority", "value": "1", "displayToAgent": true}];
 		embedded_svc.settings.extraPrechatInfo = [{
 		  "entityFieldMaps": [{
 		    "doCreate": true,
@@ -41,7 +43,20 @@
 		    "fieldName": "Origin",
 		    "isExactMatch": true,
 		    "label": "Origin"
-		  }],
+		  },{
+		    "doCreate": true,
+		    "doFind": false,
+		    "fieldName": "Caso_Reportado_por__c",
+		    "isExactMatch": true,
+		    "label": "Reported By"
+		  },{
+		    "doCreate": true,
+		    "doFind": false,
+		    "fieldName": "Priority",
+		    "isExactMatch": true,
+		    "label": "Priority"
+		  }
+				     ],
 		  "entityName": "Case"
 		}];
 
