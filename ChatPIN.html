@@ -82,7 +82,21 @@
 		  }
 				     ],
 		  "entityName": "Case"
-		}];
+		},
+		{"entityFieldMaps":
+		 [{"doCreate":false,
+		   "doFind":true,
+		   "fieldName":"LastName",
+		   "isExactMatch":true,
+		   "label":"Last Name"},
+		  {"doCreate":false,
+		   "doFind":true,
+		   "fieldName":"FirstName",
+		   "isExactMatch":true,
+		   "label":"First Name"}, 
+		  ],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}					  
+							 ];
+		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":false,"doFind":true,"fieldName":"LastName","isExactMatch":true,"label":"Last Name"},{"doCreate":false,"doFind":true,"fieldName":"FirstName","isExactMatch":true,"label":"First Name"}, {"doCreate":false,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}];
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
