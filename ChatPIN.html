@@ -35,56 +35,7 @@
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
 		//};
-		embedded_svc.settings.prepopulatedPrechatFields = {FirstName: "Alberto",LastName: "Vazquez",Email: "alberto.vazquez@isdin.com"};
-		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Origin", "value": "Chat", "displayToAgent": true},
-								 { "label": "Reported By", "value": "Cliente", "displayToAgent": true},
-								 { "label": "Priority", "value": "3", "displayToAgent": true},
-								 { "label": "Org. Ventas", "value": "Org. Ventas ISDIN ES", "displayToAgent": true},
-								 { "label": "Canal_Venta", "value": "Online", "displayToAgent": true},
-								 { "label": "Tienda", "value": "Médico", "displayToAgent": true}];
-		embedded_svc.settings.extraPrechatInfo = [{
-		  "entityFieldMaps": [{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Origin",
-		    "isExactMatch": true,
-		    "label": "Origin"
-		  },{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Caso_Reportado_por__c",
-		    "isExactMatch": true,
-		    "label": "Reported By"
-		  },{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Priority",
-		    "isExactMatch": true,
-		    "label": "Priority"
-		  },{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Org_Ventas__c",
-		    "isExactMatch": true,
-		    "label": "Org. Ventas"
-		  },{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Canal_Venta__c",
-		    "isExactMatch": true,
-		    "label": "Canal_Venta"
-		  },{
-		    "doCreate": true,
-		    "doFind": false,
-		    "fieldName": "Tienda__c",
-		    "isExactMatch": true,
-		    "label": "Tienda"
-		  }
-				     ],
-		  "entityName": "Case"
-		}];
-		
-		embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":true,"doFind":false,"fieldName":"LastName","isExactMatch":false,"label":"Last Name"},{"doCreate":true,"doFind":false,"fieldName":"FirstName","isExactMatch":false,"label":"First Name"}, {"doCreate":true,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}];
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
@@ -118,6 +69,7 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+</script>
 </script>
 </body>
 </html>
