@@ -92,7 +92,7 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://embraceisdin--SBFull.my.salesforce.com',
+			'https://embraceisdin--sbfull.my.salesforce.com',
 			'https://sbfull-embrace.cs119.force.com/IsdinChats',
 			gslbBaseURL,
 			'00D2z0000008ann',
@@ -110,7 +110,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://embraceisdin--SBFull.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://embraceisdin--sbfull.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
