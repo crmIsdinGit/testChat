@@ -22,7 +22,7 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = 'es'; //For example, enter 'en' or 'en-US'
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
@@ -82,9 +82,35 @@
 		  }
 				     ],
 		  "entityName": "Case"
-		}];
+		},{
+		"entityFieldMaps":[{
+		"doCreate":true,
+		"doFind":false,
+		"fieldName":"LastName",
+		"isExactMatch":false,
+		"label":"Last Name"
+		},{
+		"doCreate":true,
+		"doFind":false,
+		"fieldName":"FirstName",
+		"isExactMatch":false,
+		"label":"First Name"
+		}, {
+		"doCreate":true,
+		"doFind":true,
+		"fieldName":"Email",
+		"isExactMatch":true,
+		"label":"Email"
+		}
+		],
+		"entityName":"Contact",
+		"saveToTranscript":"Contact",
+		"showOnCreate":true}
+		];
 		
 		//embedded_svc.settings.extraPrechatInfo = [{"entityFieldMaps":[{"doCreate":true,"doFind":false,"fieldName":"LastName","isExactMatch":false,"label":"Last Name"},{"doCreate":true,"doFind":false,"fieldName":"FirstName","isExactMatch":false,"label":"First Name"}, {"doCreate":true,"doFind":true,"fieldName":"Email","isExactMatch":true,"label":"Email"}],"entityName":"Contact","saveToTranscript":"Contact","showOnCreate":true}];
+		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
 
@@ -118,6 +144,7 @@
 	} else {
 		initESW('https://service.force.com');
 	}
+</script>
 </script>
 </script>
 </body>
